@@ -98,7 +98,8 @@ function validation() {
     let secondSel = flippedCards[1].name;
 
     if (flippedCards.length == 3) {
-        cards[flippedCardsIds[2]].setAttribute("src", "images/blank.jpg")
+        cards[flippedCardsIds[2]].setAttribute("src", "images/blank.jpg");
+        cards[flippedCardsIds[2]].setAttribute("src", "images/blank.jpg");
     }
 
     if (firstSel == secondSel) {
