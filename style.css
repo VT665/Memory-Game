@@ -1,6 +1,6 @@
+
 body {
     background-color: powderblue;
-    forced-color-adjust: #000;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-variant: small-caps;
     font-stretch: semi-expanded;
@@ -15,4 +15,11 @@ body {
 
 .grid {
     width: 40%;
+}
+
+.button {
+    background-color:#97e954;
+    width:12;
+    height: 12%;
+    font-size: large;
 }

@@ -61,11 +61,25 @@ const grid = document.querySelector(".grid");
 const scoreDisplay = document.querySelector("#score");
 const attemptsDisplay = document.querySelector("#attempts");
 const messageDisplay = document.querySelector("#message");
-messages = ["", " You found a match, Keep going! ", " Memorise and Try again! ", " Congrats! You found them all ", " Welcome to The Memory Game "];
+const Button = document.querySelector(".button");
+const btntxt = document.querySelector("#buttontxt")
+Button.addEventListener("click", btn);
+let btn_flag = 0;
 
+messages = ["", " You found a match, Keep going! ", " Memorise and Try again! ", " Congrats! You found them all ", " Welcome to The Memory Game "];
 let score = 0;
 let attempts = 0;
 messageDisplay.textContent=messages[4];
+
+function btn() {
+    if (btn_flag === 0) {
+        createGrid();
+        btn_flag=1;
+        btntxt.textContent = "Restart Game";
+    } else if (btn_flag===1) {
+        window.location.reload();
+    }
+}
 
 function createGrid() {
     for (let i=0; i<12; i++) {
@@ -123,5 +137,4 @@ function flip() {
         messageDisplay.textContent = messages[0]
     }
 }
-createGrid();
 });
